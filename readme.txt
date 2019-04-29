@@ -89,8 +89,26 @@ we can simply use in html page. ionic just add animations to angular futures.
 Need of same data for multiple pages then StateManagement is key in Angular: 
 Manageing State with services ->
 
+build native apps:
+ionic capacitor add android  // ionic cordova prepare android
+    -> if you get error: simply build ng build < An error occurred while running subprocess capacitor>
+    -> rerun ionic capacitor add android :
+
+-> after that you need to run each : ng build -> create www folder
+            ionic capacitor copy android -> copy and wrap www folder
+  -> instead of this execute: ionic capacitor run android ->
+                    it includes ng build and copy.... <it opens android studio as well>
+                    //ionic capacitor run android -l it do same ng serve , don't need to build every changes
+                        **live reload
 
 
+ionic capacitor add ios  // ionic cordova prepare ios
+    -> Xcode for ios development
+        -> xcode-select // if not install : xcode-select --install
+    -> ng build 
+    -> ionic capacitor copy ios 
+     **ionic capacitor run ios //it does build and copy process
+        ->  ionic capacitor copy ios -l //live reload
 
 
 
